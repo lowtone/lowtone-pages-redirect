@@ -1,8 +1,6 @@
-angular = angular
+angular = @angular
 
-@RedirectCtrl = ($scope, $http) ->
-	$scope.type = 'no_redirect'
+settings = @lowtone_pages_redirect
 
-	$scope
-	
-@RedirectCtrl.$inject = ['$scope', '$http']
+@RedirectCtrl = ($scope) ->
+	angular.extend $scope, settings
